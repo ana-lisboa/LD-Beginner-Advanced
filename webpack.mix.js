@@ -16,4 +16,5 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
         require('autoprefixer'),
     ])
-    .browserSync('http://ld-beginner-advanced.test:8080');
+    .browserSync('http://ld-beginner-advanced.test:8080')
+    .disableSuccessNotifications();

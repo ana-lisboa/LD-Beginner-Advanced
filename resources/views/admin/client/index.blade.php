@@ -43,6 +43,7 @@
                             @method('DELETE')
                             @csrf
                             <button type="submit" class="ml-3 px-2 py-1 rounded  text-sm text-slate-600 hover:text-slate-500">Delete</button>
+                        </form>
                     </td>
                 </tr>
 

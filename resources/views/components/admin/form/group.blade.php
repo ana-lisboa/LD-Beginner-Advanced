@@ -1,7 +1,8 @@
 @props([
     'class' => 'flex-col',
+    'extraClass' => ''
 ])
 
-<div class="flex {{ $class }} mb-6">
+<div class="flex {{ $class . ' ' . $extraClass }} mb-6">
     {{ $slot }}
 </div>
