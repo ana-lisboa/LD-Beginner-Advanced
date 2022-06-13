@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\ClientController;
+use \App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,14 +21,18 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth'])
+    ->name('dashboard');
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
 
-    Route::resource(
-        'clients', ClientController::class,
+    Route::resource('clients', ClientController::class,
     )->except(['show'])
-        ->names('admin.clients');
+    ->names('admin.clients');
+
+    Route::resource('projects', ProjectController::class,
+    )->except(['show'])
+    ->names('admin.projects');
 
 });
 
