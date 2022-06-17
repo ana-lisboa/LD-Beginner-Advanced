@@ -34,7 +34,7 @@
         <x-admin.nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">Users</x-admin.nav-link>
         <x-admin.nav-link href="{{ route('admin.clients.index') }}" :active="request()->routeIs('admin.clients.index')">Clients</x-admin.nav-link>
         <x-admin.nav-link href="{{ route('admin.projects.index') }}" :active="request()->routeIs('dashboard')">Projects</x-admin.nav-link>
-        <x-admin.nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">Tasks</x-admin.nav-link>
+        <x-admin.nav-link href="{{ route('admin.tasks.index') }}" :active="request()->routeIs('dashboard')">Tasks</x-admin.nav-link>
     </aside>
 
     <!-- Page Content -->

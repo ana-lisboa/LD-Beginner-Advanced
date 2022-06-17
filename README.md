@@ -77,5 +77,6 @@ Here's the list of Roadmap features you need to try to implement in your code:
 
 
 # next
-- [x] client delete
-- [x] client add photo to form
+- [] task crud : dont let edit a done task
+- [] model relations (with updated seeds for the relations) + review indexes and cruds
+- [] user types
