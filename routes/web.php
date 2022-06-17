@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\ClientController;
 use \App\Http\Controllers\ProjectController;
@@ -33,6 +34,10 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::resource('projects', ProjectController::class,
     )->except(['show'])
     ->names('admin.projects');
+
+    Route::resource('tasks', TaskController::class,
+    )->except(['show'])
+    ->names('admin.tasks');
 
 });
 
